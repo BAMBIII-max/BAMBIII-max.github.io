@@ -1,1 +1,151 @@
-BAMBIII-max.github.io
+<!DOCTYPE html>
+<html lang="th">
+ <style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.description {
+    padding: 30px 20px;
+}
+
+.section-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.location-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 40px;
+}
+
+.location-list button {
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 200px;
+    text-align: center;
+}
+
+.location-list button:hover {
+    background-color: #d1e7ff;
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .location-list button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section-header {
+        font-size: 20px;
+    }
+}
+</style>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ศูนย์บริการของ Hitachi Elevator Thailand ครอบคลุมทั่วประเทศ พร้อมให้บริการคุณอย่างมืออาชีพ">
+  <title>ศูนย์การบริการ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Siam-Hitachi Elevator</h1>
+  </header>
+
+  <section class="description">
+    <h2>ยินดีต้อนรับสู่ศูนย์บริการของ Hitachi Elevator Thailand</h2>
+    <p>เรามีศูนย์บริการครอบคลุมทั่วประเทศสำหรับลูกค้าของเรา เพื่อให้บริการที่ดีที่สุดแก่คุณ</p>
+  </section>
+
+  <h2 class="section-header">ศูนย์บริการภาคเหนือ</h2>
+  <div class="location-list">
+    <button onclick="openMap('https://goo.gl/maps/KgudsbxTRLCtXBQk6?g_st=ac')">ศูนย์บริการเชียงใหม่</button>
+    <button onclick="openMap('https://goo.gl/maps/PYgAguhTqsmeTHag7?g_st=ac')">ศูนย์บริการพิษณุโลก</button>
+  </div>
+
+  <h2 class="section-header">ศูนย์บริการภาคอีสาน</h2>
+  <div class="location-list">
+    <button onclick="openMap('https://maps.app.goo.gl/Hnoi2n6cDg6PF3aG6')">ศูนย์บริการโคราช</button>
+    <button onclick="openMap('https://goo.gl/maps/g3wUVQHxZuhAze3GA?g_st=ac')">ศูนย์บริการขอนแก่น</button>
+  </div>
+
+  <h2 class="section-header">ศูนย์บริการภาคตะวันออก</h2>
+  <div class="location-list">
+    <button onclick="openMap('https://goo.gl/maps/rLfPVwsKG4vYW7XQA?g_st=ac')">ศูนย์บริการระยอง</button>
+    <button onclick="openMap('https://goo.gl/maps/aYeqbxhK6VNHuBpk9?g_st=ac')">ศูนย์บริการพัทยา</button>
+  </div>
+
+  <h2 class="section-header">ศูนย์บริการภาคใต้</h2>
+  <div class="location-list">
+    <button onclick="openMap('https://goo.gl/maps/RpsbeiF5tDtw6AdTA?g_st=ac')">ศูนย์บริการหัวหิน</button>
+    <button onclick="openMap('https://goo.gl/maps/44pNqv2QDvQ1j9gw6?g_st=ac')">ศูนย์บริการหาดใหญ่</button>
+    <button onclick="openMap('https://maps.app.goo.gl/TjA52Z68M8beKDyC6?g_st=ac')">ศูนย์บริการภูเก็ต</button>
+  </div>
+
+  <h2 class="section-header">ศูนย์บริการในเขตกรุงเทพมหานคร</h2>
+  <div class="location-list">
+    <button onclick="openMap('https://maps.app.goo.gl/2MEYgDwjN7QrauEx5?g_st=ac')">ศูนย์บริการธนบุรี</button>
+    <button onclick="openMap('https://maps.app.goo.gl/P2wJRWw6PWnTyA2H6?g_st=ac')">ศูนย์บริการปทุมวัน</button>
+    <button onclick="openMap('https://maps.app.goo.gl/qxyfKXNNoiPfUa448?g_st=al')">ศูนย์บริการสุขุมวิท</button>
+    <button onclick="openMap('https://maps.app.goo.gl/k6JGdYnSHtVCpVwQA?g_st=ac')">ศูนย์บริการวิภาวดีรังสิต1,2</button>
+  </div>
+
+  <h2 class="section-header">ศูนย์บริการย่อยในเขตกรุงเทพและปริมณฑล</h2>
+  <div class="location-list">
+    <button onclick="openMap('https://goo.gl/maps/FFkufdYtyxdcUsU56?g_st=ac')">ศูนย์บริการย่อยนครศรีธรรมราช</button>
+    <button onclick="openMap('https://goo.gl/maps/A61sVMzgn9LQk7aH6?g_st=ac')">ศูนย์บริการย่อยสนามบินสุวรรณภูมิ คอร์ทE</button>
+    <button onclick="openMap('https://goo.gl/maps/6cHzddmPHeftPGMNA?g_st=ac')">ศูนย์บริการสนามบินดอนเมือง</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Hitachi Elevator (Thailand) Co., Ltd.</p>
+  </footer>
+
+  <script>
+    function openMap(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
+
