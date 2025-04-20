@@ -145,6 +145,53 @@ footer {
       window.open(url, '_blank');
     }
   </script>
+ <script>// script.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getLocationBtn = document.getElementById("getLocation");
+  const output = document.getElementById("output");
+
+  getLocationBtn.addEventListener("click", () => {
+    // ตรวจสอบว่าเบราว์เซอร์รองรับ Geolocation หรือไม่
+    if (!navigator.geolocation) {
+      output.innerHTML = "Geolocation is not supported by your browser.";
+      return;
+    }
+
+    output.innerHTML = "Getting your location...";
+
+    // ขอพิกัดจากผู้ใช้
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        output.innerHTML = `
+          <p><strong>Latitude:</strong> ${latitude}</p>
+          <p><strong>Longitude:</strong> ${longitude}</p>
+          <a href="https://www.google.com/maps?q=${latitude},${longitude}" target="_blank">
+            📍 View on Google Maps
+          </a>
+        `;
+      },
+      (error) => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            output.innerHTML = "User denied the request for Geolocation.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            output.innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            output.innerHTML = "The request to get user location timed out.";
+            break;
+          default:
+            output.innerHTML = "An unknown error occurred.";
+            break;
+        }
+      }
+    );
+  });
+});
+</script>
 
 </body>
 </html>
